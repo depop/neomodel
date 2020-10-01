@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='neomodel',
-    version='2.0.2',
+    version='2.0.2-depop1',
     description='An object mapper for the neo4j graph database.',
     long_description=open('README.rst').read(),
     author='Robin Edwards',
@@ -28,7 +28,5 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
         "Topic :: Database",
     ])
