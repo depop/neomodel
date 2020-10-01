@@ -3,19 +3,21 @@ dist: precise  # (12.04) needed for jdk 7 (which is required by Neo4J 2.x)
 jdk:
   - oraclejdk7 
 python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
+  # - "2.7"
+  # - "3.4"
+  # - "3.5"
   - "3.6"
   # 3.7 and 3.8 are not readily available in Ubuntu 12
   # ...but jdk 7 is not readily available in later Ubuntus
 install: "python setup.py install"
 script: nosetests -s
 env:
-  - NEO4J_VERSION="2.0.5"
-  - NEO4J_VERSION="2.1.8"
+  # - NEO4J_VERSION="2.0.5"
+  # - NEO4J_VERSION="2.1.8"
   - NEO4J_VERSION="2.2.10"
 before_install:
   - wget dist.neo4j.org/neo4j-community-$NEO4J_VERSION-unix.tar.gz
   - tar -xzf neo4j-community-$NEO4J_VERSION-unix.tar.gz
+  - ls neo4j-community-$NEO4J_VERSION/conf/
+  - if [ "$NEO4J_VERSION" = "2.2.10" ]; then sed -Ei 's/dbms.security.auth_enabled=true/dbms.security.auth_enabled=false/' neo4j-community-$NEO4J_VERSION/conf/neo4j-server.properties; fi
   - neo4j-community-$NEO4J_VERSION/bin/neo4j start
