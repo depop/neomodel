@@ -32,7 +32,7 @@ Requirements
 - Python 2.7, 3.4, 3.5, 3.6
 - neo4j |ss| 2.0 |se|, 2.1, 2.2
 
-(there is a broken test under Neo4j 2.0.5, neomodel appears to using an unsupported Cypher operator)
+(there is a broken test under Neo4j 2.0.5, neomodel appears to be using an unsupported Cypher operator)
 
 Installation
 ============
