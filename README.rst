@@ -29,8 +29,10 @@ Available on readthedocs_.
 Requirements
 ============
 
-- Python 2.7, 3.4
-- neo4j 2.0, 2.1, 2.2
+- Python 2.7, 3.4, 3.5, 3.6
+- neo4j |ss| 2.0 |se|, 2.1, 2.2
+
+(there is a broken test under Neo4j 2.0.5, neomodel appears to be using an unsupported Cypher operator)
 
 Installation
 ============
@@ -115,3 +117,12 @@ Install neomodel for development and run the suite::
 .. image:: https://badges.gitter.im/Join%20Chat.svg
    :alt: Join the chat at https://gitter.im/robinedwards/neomodel
    :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+
+.. |ss| raw:: html
+
+   <strike>
+
+.. |se| raw:: html
+
+   </strike>
